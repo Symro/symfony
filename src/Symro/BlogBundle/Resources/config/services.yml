@@ -1,0 +1,7 @@
+parameters:
+#    symro_blog.example.class: Symro\BlogBundle\Example
+
+services:
+#    symro_blog.example:
+#        class: %symro_blog.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
