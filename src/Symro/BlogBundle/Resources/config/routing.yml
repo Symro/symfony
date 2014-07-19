@@ -1,3 +1,27 @@
-HelloTheWorld:
-    path:	/hello-world
-    defaults: { _controller: SymroBlogBundle:Blog:index }
+Symro_blog_accueil:
+    path:	/{page}
+    defaults: { _controller: SymroBlogBundle:Blog:index, page:1 }
+    requirements:
+        page: \d*
+
+Symro_blog_article:
+    path:    /article/{id}
+    defaults: { _controller: SymroBlogBundle:Blog:article }
+    requirements:
+        id: \d+
+
+Symro_blog_ajout_article:
+    path:    /ajouter
+    defaults: { _controller: SymroBlogBundle:Blog:ajouter }
+
+Symro_blog_modifier_article:
+    path:    /modifier/{id}
+    defaults: { _controller: SymroBlogBundle:Blog:modifier }
+    requirements:
+        id: \d+
+
+Symro_blog_supprimer_article:
+    path:    /supprimer/{id}
+    defaults: { _controller: SymroBlogBundle:Blog:supprimer }
+    requirements:
+        id: \d+
